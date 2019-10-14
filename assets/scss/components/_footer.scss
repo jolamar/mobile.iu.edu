@@ -1,0 +1,206 @@
+
+// Colors
+$iu-scarlet: #7A1705;
+$iu-crimson: #990000;
+$iu-mahogany: #4A3D30;
+
+$iu-mahogany-darken-10: #45382B;
+$iu-mahogany-5: #F5F5F5;
+$iu-mahogany-10: #EDEBEB;
+$iu-mahogany-20: #DBD9D6;
+$iu-mahogany-30: #C9C4C2;
+$iu-mahogany-40: #B8B0AB;
+$iu-mahogany-50: #A39E96;
+$iu-mahogany-60: #918A82;
+$iu-mahogany-70: #80756E;
+$base-multiplier: 8px;
+
+#footer {
+  $img-width: 24px;
+  $img-height: 32px;
+
+  a {
+    text-decoration: none;
+  }
+  padding: ($base-multiplier * 3) 0;
+  text-align: center;
+  position: relative;
+  font-family: BentonSansRegular, Arial, serif;
+  font-weight: normal;
+
+  a {
+    color: $iu-crimson;
+  }
+
+  a:focus {
+    outline: .125rem solid #006298;
+    outline-offset: .125rem;
+  }
+
+  .signature {
+    text-align: center;
+  }
+
+  .signature-link {
+    background: url('/public/img/iu-sig-formal.svg') no-repeat left top;
+    // background: url('iu-mark-preserve.png') no-repeat left top;
+    background-size: contain;
+    display: inline-block;
+    height: 0;
+    // margin: 0 auto 10px;
+    padding-top: 36px;
+    overflow: hidden;
+    width: 240px;
+  }
+
+  // Override for image
+  .signature-link.signature-img {
+    background-image: none;
+    height: auto;
+    width: 15rem;
+    padding-top: 0;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 24px;
+    margin: 0;
+    clear: left;
+  }
+
+  .tagline {
+    font-family: BentonSansCondBold, Arial, serif;
+    font-weight: normal;
+
+    -webkit-font-smoothing: antialiased;
+
+    background: $iu-scarlet;
+    color: #fff;
+    font-size: 1.375rem;
+    line-height: 2.5rem;
+    margin: -24px -0.9375rem 24px -0.9375rem;
+    text-transform: uppercase;
+
+    letter-spacing: 0.2em;
+  }
+
+  .tagline span {
+    text-transform: lowercase;
+    font-family: GeorgiaProBoldItalic, Georgia, serif;
+    font-size: 16px;
+    vertical-align: 2px;
+    letter-spacing: 0;
+    margin-left: -4px; // account for extra letter spacing of main item
+  }
+
+  .tagline.bicentennial {
+    font-family: inherit;
+    letter-spacing: .1em;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+  #footer .line-break-small {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #footer .line-break {
+    display: block;
+  }
+  #footer .hide-on-mobile { display: none;}
+}
+
+@media only screen and (min-width: 40em) {
+  $img-width: 24px;
+  $img-height: 32px;
+
+  /* Campus names */
+  #branding-bar .show-on-tablet {
+    display: inline;
+  }
+
+  #branding-bar .show-on-mobile,
+  #branding-bar .show-on-desktop {
+    display: none;
+  }
+
+  #footer {
+    text-align: left;
+    border-top: 6px solid $iu-scarlet;
+    padding: 32px 0 24px;
+
+    // margin-top: 40px; // gives some space above the tagline
+
+    // img {
+    //     display: inline;
+    //     margin: 0;
+    //     position: absolute;
+    //     left: $column_gutter/2;
+
+    //     top: 12px;
+    //     width: $img-width;
+    // }
+    p {
+      line-height: 36px;
+    }
+    .signature {
+      float: left;
+      text-align: left;
+      height: 36px;
+    }
+    .copyright {
+      float: right;
+      clear: right;
+      text-align: right;
+    }
+
+    .tagline {
+      font-size: 24px;
+
+      position: absolute;
+      left: 50%;
+      // right margin spoofs width so that tagline doesn't break to two lines
+      margin: 0 -200px 0 0;
+      // footer has 24px padding, tagline is 40 px tall, border is 6px;
+      // so: -(24 + 20 + 3);
+      top: -55px;
+      padding: 0 24px;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+
+    .tagline.bicentennial {
+      padding: 0 16px;
+    }
+  }
+}
+
+#footer .row.pad {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+}
+
+#footer .row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 64rem;
+  position: relative;
+}
+
+#footer .tagline.celebration svg {
+  vertical-align: middle;
+}
+#footer .tagline.bicentennial.celebration {
+  font-size: inherit;
+  padding-bottom: 2px;
+}

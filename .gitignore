@@ -1,0 +1,9 @@
+.idea
+node_modules/
+public/
+tmp/
+static/css/style.css
+static/js/*.js
+.DS_Store
+.vscode
+/vendor/

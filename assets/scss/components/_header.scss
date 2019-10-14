@@ -1,0 +1,292 @@
+// Header
+
+header .rvt-header__main-nav ul li a[aria-current]:after, .rvt-header__main-nav ul li button[aria-current]:after {
+  top: 2rem;
+}
+
+
+.search-input {
+  border: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='currentColor' d='M15.71,14.29,10.89,9.47a6,6,0,1,0-1.42,1.42l4.82,4.82a1,1,0,0,0,1.42,0A1,1,0,0,0,15.71,14.29ZM6,10a4,4,0,1,1,4-4A4,4,0,0,1,6,10Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 6px;
+  padding-left: 1.75rem !important;
+  width: 100px !important;
+  transition: width .4s !important;
+}
+
+.search-input:focus {
+  width: 204px !important;
+}
+
+.rvt-header-id__avatar {
+  line-height: 1.25rem;
+}
+
+@media screen and (max-width: 67.49em) {
+  .rvt-container--full {
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 67.5em) {
+  .rvt-header-id {
+    width: 134px;
+  }
+  .rvt-login-button {
+    width: 134px;
+    height: 30px;
+    justify-content: center;
+  }
+}
+
+
+
+.rvt-header {
+  border-top: 6px solid #990000;
+  display: block;
+  align-items: initial;
+
+  .rvt-header__main-nav--small {
+    li a {
+      color: #666;
+      font-size: 14px;
+      &[aria-current]:after {
+        top: 1.5rem !important;
+        height: 2px;
+      }
+    }
+  }
+
+  .rvt-container {
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @media screen and (min-width: 46.25em) {
+    .rvt-container {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 67.5em) {
+    &__trident {
+      min-width: 41px;
+      flex-basis: 41px;
+      margin-right: .5rem;
+      height: 75px;
+      &-logo {
+        width: 41px;
+        height: 48px;
+        margin-top: 12px;
+      }
+    }
+
+  }
+
+  .rvt-header__trident + &__title {
+    font-family: "BentonSansCondBold";
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &--no-border {
+    border-bottom: none;
+  }
+
+  .rvt-page-header__title-block {
+    margin-top: -1rem;
+  }
+
+  .rvt-header__main-nav ul li {
+    margin-right: 1.5rem;
+  }
+  .rvt-header__main-nav ul li a {
+    position: relative;
+  }
+  .rvt-header__main-nav ul li a:after {
+    transition: opacity .4s;
+    content: " ";
+    position: absolute;
+    left: 0;
+    opacity: 0;
+  }
+
+  .rvt-header__main-nav ul li a[aria-current]:after,
+  .rvt-header__main-nav ul li a:hover:after {
+    background-color: #990000;
+    top: 1.5rem;
+    width: 100%;
+    opacity: 1;
+  }
+  .rvt-header__main-nav ul li a:hover:after {
+    height: .25rem;
+    opacity: 1;
+  }
+  .rvt-header__main-nav.rvt-header__main-nav--small {
+    margin-right: 1.5rem;
+    ul li {
+      margin-right: 1.5rem;
+      a:hover {
+        &:after {
+          top: 1.5rem !important;
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  .rvt-header__main-nav a:hover {
+    text-decoration: none !important;
+  }
+
+  .rvt-header__main-nav li + li.left-border {
+    padding-left: 1.5rem;
+    border-left: 2px solid #ccc;
+  }
+
+  .rvt-header__main-nav a {
+    font-family: BentonSansRegular;
+  }
+
+  .rvt-container--underline {
+    .rvt-header__main-nav a {
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .rvt-header-id__profile {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  @media screen and (max-width: 67.49em) {
+    .rvt-container:nth-child(2) {
+      padding: 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .rvt-header-id {
+      margin: 0;
+      display: initial;
+      &__user, svg {
+        display: none;
+      }
+    }
+
+    .rvt-page-header__title-block {
+      margin-left: 1em;
+      padding-bottom: .5em;
+    }
+    .rvt-drawer-button-close, .rvt-drawer-button-open {
+      width: 24px;
+      height: 24px;
+    }
+    .rvt-drawer-button {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      height: 47px;
+      width: 47px;
+      border-left: 0;
+    }
+    .rvt-header-id__profile {
+      margin-right: 7px;
+    }
+    .rvt-login-button {
+      margin-right: 1.5rem;
+    }
+
+    .rvt-drawer {
+      top: 53px;
+      width: 100%;
+      max-width: 100%;
+      min-height: calc(100% - 53px);
+    }
+  }
+}
+
+
+
+
+
+.rvt-p-relative {
+  position: relative !important;
+}
+
+input:not([type]):disabled, input[type=color]:disabled, input[type=date]:disabled, input[type=datetime-local]:disabled, input[type=datetime]:disabled, input[type=email]:disabled, input[type=month]:disabled, input[type=number]:disabled, input[type=password]:disabled, input[type=search]:disabled, input[type=tel]:disabled, input[type=text]:disabled, input[type=time]:disabled, input[type=url]:disabled, input[type=week]:disabled, select:disabled, textarea:disabled {
+  background-color: #eee !important;
+}
+
+[v-cloak] > * { display:none }
+
+@media screen and (max-width: 1250px) and (min-width: 67.49em) {
+  .rvt-header .rvt-drawer-button {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    height: 75px;
+    width: 75px;
+    border-left: 0;
+    display: initial;
+  }
+  .rvt-header__main-nav {
+    display: none;
+  }
+  .rvt-header-id, .rvt-login-button {
+    margin-right: 4rem;
+  }
+  .rvt-drawer-button[aria-expanded=true]>.rvt-drawer-button-close {
+    margin: 0 auto;
+  }
+  .rvt-drawer {
+    top: 81px;
+  }
+  .search--mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width:1079px) {
+  .rvt-header .rvt-header-id,
+  .rvt-header .rvt-login-button {
+    margin-right: 3.5rem !important;
+  }
+  .rvt-header .rvt-header-id__avatar {
+    margin-right: 0;
+  }
+  .rvt-page-header__actions {
+    margin-left: auto;
+    margin-top: 0;
+  }
+  .search--desktop {
+    display: none;
+  }
+  .search--mobile {
+    .search-input {
+      width: 100% !important;
+      &:focus {
+        width: 100% !important;
+      }
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width:46.25em) {
+  .rvt-page-header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0
+  }
+  .rvt-page-header__actions {
+    margin-left: auto;
+    margin-top: 0
+  }
+  .rvt-page-header__title {
+    line-height: 1.1
+  }
+}
