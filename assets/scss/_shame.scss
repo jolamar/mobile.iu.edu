@@ -66,6 +66,7 @@ h6 {
   .rvt-bg-light-gray {
     position: initial;
     background: #e9e9e9;
+    min-height: 600px;
   }
 
   .rvt-bg-right-gray {
@@ -81,6 +82,18 @@ h6 {
   .home-banner-image {
     position: absolute;
     right: -10rem;
-    height: 400px;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 74.5em) {
+  .home-banner-image {
+    height: 550px;
+  }
+}
+
+@media only screen and (min-width: 84.5em) {
+  .home-banner-image {
+    height: 600px;
   }
 }
