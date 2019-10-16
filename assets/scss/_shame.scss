@@ -110,3 +110,17 @@ h6 {
   border-color: #fff;
   color: #990000;
 }
+
+hr.dash {
+  margin-top: 1rem;
+  color: #DF3603;
+  border: 2px solid;
+  width: 20px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: block;
+  float: left;
+}
+hr.dash + * {
+  clear: both;
+}
