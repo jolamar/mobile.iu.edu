@@ -87,6 +87,21 @@ h6 {
                     #e9e9e9 100%);
     overflow-x: hidden;
   }
+
+  .rvt-bg-right-crimson {
+    position: relative;
+    background: linear-gradient(
+                    to right,
+                    #ffffff 0%,
+                    #ffffff 60%,
+                    #990000 75%,
+                    #990000 100%);
+    overflow-x: hidden;
+
+    .rvt-bg-crimson {
+      background: linear-gradient(45deg,#ffffff 400px, #990000 20px);
+    }
+  }
   .home-banner-image {
     position: absolute;
     right: -10rem;
